@@ -93,9 +93,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       // DOMContentLoaded を待たずに即実行 — 動画の先読みを最速で開始
       (function(){
         var v = document.currentScript.previousElementSibling;
+        var isPC = window.innerWidth >= 768;
+        // ポスター画像（動画ロード前に表示）
+        v.poster = isPC
+          ? 'images/hero-poster-pc.jpg'
+          : 'images/hero-poster-sp.jpg';
         var s = document.createElement('source');
         s.type = 'video/mp4';
-        s.src = window.innerWidth >= 768
+        s.src = isPC
           ? 'images/next%20kids_pc.mp4'
           : 'images/next%20kids_sp.mp4';
         v.appendChild(s);
