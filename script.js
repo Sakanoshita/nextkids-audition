@@ -11,11 +11,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ヒーロー背景動画：canplay でフェードイン
-  const video = document.querySelector('.hero__video');
-  if (video) {
-    const showVideo = () => { video.style.opacity = '0.80'; };
-    video.addEventListener('canplay', showVideo, { once: true });
-    setTimeout(showVideo, 3000); // フォールバック
-  }
+  // ヒーロー背景動画：poster が即時表示されるため opacity 制御は不要
 });
