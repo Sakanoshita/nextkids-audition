@@ -211,7 +211,8 @@ img { display: block; max-width: 100%; }
   align-items: center;
   text-align: center;
   padding: 56px 28px 40px;
-  justify-content: center;
+  justify-content: flex-end;
+  padding-bottom: 80px;
   gap: 0;
 }
 
