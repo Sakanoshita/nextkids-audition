@@ -217,6 +217,7 @@ img { display: block; max-width: 100%; }
 
 .hero__top {
   margin-bottom: 20px;
+  margin-top: -24px;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -227,14 +228,14 @@ img { display: block; max-width: 100%; }
 /* グランプリバッジ */
 .hero__badge {
   display: inline-block;
-  font-family: var(--pop);
+  font-family: var(--jp);
   font-weight: 900;
-  font-size: 15px;
+  font-size: 20px;
   color: var(--pink);
   letter-spacing: 0.04em;
   line-height: 1.4;
   text-align: center;
-  -webkit-text-stroke: 3px var(--white);
+  -webkit-text-stroke: 4px var(--white);
   paint-order: stroke fill;
   text-shadow:
     0 2px 0 rgba(255,255,255,0.8),
