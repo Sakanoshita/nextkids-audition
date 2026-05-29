@@ -234,13 +234,15 @@ img { display: block; max-width: 100%; }
   letter-spacing: 0.04em;
   line-height: 1.4;
   text-align: center;
-  -webkit-text-stroke: 4px var(--white);
-  paint-order: stroke fill;
   text-shadow:
-    0 2px 0 rgba(255,255,255,0.8),
-    2px 0 0 rgba(255,255,255,0.8),
-    -2px 0 0 rgba(255,255,255,0.8),
-    0 -2px 0 rgba(255,255,255,0.8);
+    -3px -3px 0 #fff,
+     3px -3px 0 #fff,
+    -3px  3px 0 #fff,
+     3px  3px 0 #fff,
+    -3px  0   0 #fff,
+     3px  0   0 #fff,
+     0   -3px 0 #fff,
+     0    3px 0 #fff;
 }
 
 /* PRODUCED BY + ロゴ */
