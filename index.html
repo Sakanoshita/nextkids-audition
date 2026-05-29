@@ -12,10 +12,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>NEXT KIDS AUDITION in NAGOYA | produced by men's egg</title>
   <meta name="description" content="あの子の才能を、本物の舞台へ。日本最大級の学生主体エンターテイメントイベント「CAMPUS COLLECTION」にて次世代スター発掘オーディション開催。">
+  <!-- フォント先読み -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kosugi+Maru&family=Noto+Sans+JP:wght@400;500;700;900&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+  <!-- Google Fonts：必要なファミリー・ウェイトのみ（Oswald・400/500を削除） -->
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kosugi+Maru&family=Noto+Sans+JP:wght@700;900&display=swap"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kosugi+Maru&family=Noto+Sans+JP:wght@700;900&display=swap">
+  </noscript>
+
+  <!-- Font Awesome：非同期読み込み（レンダリングブロックを回避） -->
+  <link rel="preload" as="style"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  </noscript>
+
+  <!-- メインCSS（同期：ページレイアウトに必須） -->
   <link rel="stylesheet" href="style.css">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VSEGCNRC8D"></script>
@@ -69,6 +89,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="hero__bg"></div>
     <div class="hero__bg2"></div>
     <video class="hero__video" autoplay muted loop playsinline preload="auto"></video>
+    <script>
+      // DOMContentLoaded を待たずに即実行 — 動画の先読みを最速で開始
+      (function(){
+        var v = document.currentScript.previousElementSibling;
+        var s = document.createElement('source');
+        s.type = 'video/mp4';
+        s.src = window.innerWidth >= 768
+          ? 'images/next%20kids_pc.mp4'
+          : 'images/next%20kids_sp.mp4';
+        v.appendChild(s);
+        v.load();
+      })();
+    </script>
     <div class="hero__overlay"></div>
     <div class="hero__inner">
       <div class="hero__top">
