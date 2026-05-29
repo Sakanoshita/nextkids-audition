@@ -226,15 +226,31 @@ img { display: block; max-width: 100%; }
 
 /* グランプリバッジ */
 .hero__badge {
+  position: relative;
   display: inline-block;
   font-family: var(--jp);
   font-weight: 900;
   font-size: 20px;
-  color: var(--pink);
   letter-spacing: 0.04em;
   line-height: 1.4;
   text-align: center;
-  -webkit-text-stroke: 4px #ffffff;
+}
+
+/* 白縁レイヤー（下層） */
+.hero__badge-stroke {
+  display: block;
+  color: transparent;
+  -webkit-text-stroke: 9px #ffffff;
+  position: absolute;
+  top: 0; left: 0; right: 0;
+}
+
+/* ピンク文字レイヤー（上層） */
+.hero__badge-fill {
+  display: block;
+  position: relative;
+  color: var(--pink);
+  z-index: 1;
 }
 
 /* PRODUCED BY + ロゴ */
