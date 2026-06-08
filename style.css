@@ -310,10 +310,10 @@ img { display: block; max-width: 100%; }
 
 .hero__period-box__date {
   font-family: var(--jp);
-  font-size: 24px;
+  font-size: 15px;
   color: var(--pink-dark);
   font-weight: 700;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
 }
 
 .hero__chance {
