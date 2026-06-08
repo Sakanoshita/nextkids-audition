@@ -315,6 +315,9 @@ img { display: block; max-width: 100%; }
   font-weight: 700;
   letter-spacing: 0.02em;
 }
+@media (min-width: 768px) {
+  .hero__period-box__date { font-size: 22px; }
+}
 
 .hero__chance {
   color: var(--white);
