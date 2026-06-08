@@ -1,3 +1,15 @@
+// 都市切り替え（SCHEDULE・EVENT INFO 連動）
+function citySwitch(city) {
+  // 全セクションの city-content を表示切り替え
+  document.querySelectorAll('.city-content').forEach(el => {
+    el.classList.toggle('city-content--hidden', el.dataset.city !== city);
+  });
+  // 全タブボタンのアクティブ状態を更新
+  document.querySelectorAll('.city-tab').forEach(btn => {
+    btn.classList.toggle('city-tab--active', btn.dataset.city === city);
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   // スムーススクロール
   document.querySelectorAll('a[href^="#"]').forEach(a => {
