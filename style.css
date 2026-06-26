@@ -323,6 +323,14 @@ img { display: block; max-width: 100%; }
 @media (min-width: 768px) {
   .hero__period-box__date { font-size: 20px; white-space: normal; }
 }
+.hero__period-box__date--closed {
+  font-size: 11px;
+  color: var(--gray);
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  .hero__period-box__date--closed { font-size: 14px; }
+}
 
 .hero__chance {
   color: var(--white);
@@ -1715,6 +1723,12 @@ img { display: block; max-width: 100%; }
   font-size: 17px;
   color: var(--white);
   letter-spacing: 0.04em;
+}
+
+.cta-section__period--closed {
+  font-size: 12px;
+  color: rgba(255,255,255,0.4);
+  font-weight: 400;
 }
 
 .cta-section__note {
